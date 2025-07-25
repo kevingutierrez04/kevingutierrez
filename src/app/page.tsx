@@ -1,36 +1,48 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div className="h-screen w-screen overflow-hidden font-sans">
       {/* Header */}
       <header className="fixed top-0 left-0 w-full h-16 bg-transparent backdrop-blur-md z-50 flex items-center justify-center border-b border-white/10">
         <nav className="flex gap-8 text-white font-medium text-sm">
-          <button>About</button>
-          <button>Experience</button>
-          <button>Projects</button>
-          <button>Honors</button>
-          <button>Hobbies</button>
+          <button className="cursor-pointer">About</button>
+          <button className="cursor-pointer">Experience</button>
+          <button className="cursor-pointer">Projects</button>
+          <button className="cursor-pointer">Honors</button>
+          <button className="cursor-pointer">Hobbies</button>
         </nav>
       </header>
 
       {/* Split layout */}
       <div className="flex pt-16 h-full">
         {/* Left fixed panel */}
-        <aside className="content-center w-1/2 bg-gray-900 text-white pl-25 p-10 space-y-5 overflow-y-auto">
+        <aside className="content-center w-1/2 bg-gray-800 text-white pl-20 p-10 space-y-5 overflow-y-auto">
           <div>
             <h1 className="text-left pb-5 text-3xl font-bold">Kevin Gutierrez</h1>
-            <p className="text-left text-sm">Columbia University Class of 2026</p>
-            <p className="text-left text-sm">Computer Science</p>
-            <p className="text-left text-sm">New York, NY</p>
-            <p className="text-left text-sm">kmg2226@columbia.edu</p>
+            <p className="pb-0.5 text-left text-sm">Columbia University Class of 2026</p>
+            <p className="pb-0.5 text-left text-sm">Computer Science</p>
+            <p className="pb-0.5 text-left text-sm">New York, NY</p>
+            <p className="pb-0.5 text-left text-sm">kmg2226@columbia.edu</p>
           </div>
-          <button className="mt-4 px-4 py-2 border border-white rounded hover:bg-white hover:text-black transition">
-            Placeholder Button
-          </button>
+          <a className="cursor-pointer mt-4 px-4 py-2 border border-white rounded hover:bg-white hover:text-black transition"
+          href="/images/resume.png"
+          target="_blank" 
+          rel="noopener noreferrer"
+          >
+            Resume
+          </a>
+
+          <div className="h-48"></div>
+            <div className="flex gap-2">
+              <a href="https://github.com/kevingutierrez04" target="_blank" rel="noopener noreferrer" className="w-[40px] h-[40px] justify-center shadow-sm">
+                <img src="/images/github.png" alt="Github logo"/>
+              </a>
+              <a href="https://www.linkedin.com/in/kevin-gutierrez-garcia/" target="_blank" rel="noopener noreferrer" className="w-[40px] h-[40px] justify-center shadow-sm">
+                <img src="/images/linkedin.webp" alt="Linkedin logo"/>
+              </a>
+            </div>
         </aside>
 
-        {/* Right scrollable panel */}
+        {/* Right panel */}
         <main className="bg-gray-900 w-1/2 h-full overflow-y-scroll p-10 space-y-20 bg-gray-900 text-white">
           <section id="about">
             <h2 className="text-center text-2xl font-bold mb-2">About</h2>
