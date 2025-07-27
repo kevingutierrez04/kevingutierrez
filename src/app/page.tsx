@@ -1,5 +1,7 @@
 import { experienceData } from '../data/experienceData';
 import { ExperienceItem } from '../components/experienceItem';
+import { projectData } from '../data/projectData';
+import { ProjectItem } from '../components/projectItem';
 
 export default function Home() {
   return (
@@ -78,7 +80,11 @@ export default function Home() {
 
           <section id="projects">
             <h2 className="text-center text-2xl font-bold mb-2">Selected Projects</h2>
-            <p>Donec ullamcorper, libero nec malesuada eleifend, turpis sapien porta lacus...</p>
+            <div className="space-y-6">
+              {projectData.map((item, index) => (
+                <ProjectItem key={index} {...item} />
+              ))}
+            </div>
           </section>
 
           <section id="honors">
