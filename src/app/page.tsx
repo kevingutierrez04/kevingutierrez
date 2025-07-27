@@ -1,3 +1,6 @@
+import { experienceData } from '../data/experienceData';
+import { ExperienceItem } from '../components/experienceItem';
+
 export default function Home() {
   return (
     <div className="h-screen w-screen overflow-hidden font-sans">
@@ -46,27 +49,41 @@ export default function Home() {
         <main className="bg-gray-900 w-1/2 h-full overflow-y-scroll p-10 space-y-20 bg-gray-900 text-white">
           <section id="about">
             <h2 className="text-center text-2xl font-bold mb-2">About</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec tincidunt arcu...</p>
+            <div className="space-y-3">
+              <p>
+              I’m a senior at Columbia University studying Computer Science with a minor in Economics. 
+              I have tangential interests in business, marketing, and startups.
+              </p>
+              <p>
+              This summer, I interned as a Software Development Engineer at Amazon Web Services on the
+              AI Platforms team. In my time, I designed and implemented the infrastructure for a log
+              sharing service to be used by SageMaker AI Partner Apps. Before my internship, ML modeling
+              and Governance vendors such as Deepchecks, Fiddler, and Lakera Guard had no automated method to
+              independently debug customer production workloads.
+              </p>
+              <p>
+              In my free time, I’m usually running, reading, or climbing. I’ve also been an avid skier my whole life.
+              </p>
+            </div>
           </section>
 
           <section id="experience">
-            <h2 className="text-center text-2xl font-bold mb-2">Experience</h2>
-            <p>Fusce imperdiet, erat vel consectetur pretium, erat augue varius justo...</p>
+            <h2 className="text-2xl font-bold mb-4">Experience</h2>
+            <div className="space-y-6">
+              {experienceData.map((item, index) => (
+                <ExperienceItem key={index} {...item} />
+              ))}
+            </div>
           </section>
 
           <section id="projects">
-            <h2 className="text-center text-2xl font-bold mb-2">Projects</h2>
+            <h2 className="text-center text-2xl font-bold mb-2">Selected Projects</h2>
             <p>Donec ullamcorper, libero nec malesuada eleifend, turpis sapien porta lacus...</p>
           </section>
 
           <section id="honors">
             <h2 className="text-center text-2xl font-bold mb-2">Honors</h2>
             <p>Aliquam at nunc vel ligula faucibus fermentum. Sed blandit quis lorem nec hendrerit...</p>
-          </section>
-
-          <section id="hobbies">
-            <h2 className="text-center text-2xl font-bold mb-2">Hobbies</h2>
-            <p>Nam finibus purus a sapien malesuada, nec fermentum turpis faucibus...</p>
           </section>
         </main>
       </div>
