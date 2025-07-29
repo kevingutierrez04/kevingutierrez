@@ -26,11 +26,11 @@ interface ProjectItemProps {
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-lg font-semibold text-blue-600 hover:underline mt-3"
+          className="text-orange-400 text-lg font-semibold hover:underline mt-3"
         >
           {title}
         </a>
-        <p className="text-sm text-gray-700 mt-2">{description}</p>
+        <p className="text-sm text-gray-500 mt-2">{description}</p>
       </div>
     );
   };

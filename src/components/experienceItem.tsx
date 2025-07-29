@@ -29,13 +29,13 @@ interface ExperienceItemProps {
           <div className="flex justify-between items-start">
             <div>
               <h3 className="text-lg font-semibold">{role}</h3>
-              <a href={companyUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">
+              <a href={companyUrl} target="_blank" rel="noopener noreferrer" className="text-orange-400 text-sm hover:underline">
                 {company}
               </a>
             </div>
             <span className="text-sm text-gray-500">{tenure}</span>
           </div>
-          <p className="text-sm mt-2 text-gray-700">{description}</p>
+          <p className="text-sm mt-2 text-gray-500">{description}</p>
         </div>
       </div>
     );
