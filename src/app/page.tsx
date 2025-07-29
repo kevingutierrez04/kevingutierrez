@@ -6,6 +6,7 @@ import { projectData } from '../data/projectData';
 import { ProjectItem } from '../components/projectItem';
 import { useEffect, useState } from 'react';
 import { useRef } from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Home() {
   const mainRef = useRef<HTMLElement>(null);
@@ -79,11 +80,21 @@ export default function Home() {
 
           <div className="h-48"></div>
             <div className="flex gap-2">
-              <a href="https://github.com/kevingutierrez04" target="_blank" rel="noopener noreferrer" className="w-[40px] h-[40px] flex items-center justify-center shadow-sm invert">
-                <img src="/images/github.png" alt="Github logo"/>
+              <a
+                href="https://github.com/kevingutierrez04"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[40px] h-[40px] flex items-center justify-center shadow-sm text-orange-400 hover:text-orange-600 transition"
+              >
+                <FaGithub size={40} />
               </a>
-              <a href="https://www.linkedin.com/in/kevin-gutierrez-garcia/" target="_blank" rel="noopener noreferrer" className="w-[40px] h-[40px] justify-center shadow-sm invert">
-                <img src="/images/linkedin.webp" alt="Linkedin logo"/>
+              <a
+                href="https://www.linkedin.com/in/kevin-gutierrez-garcia/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[40px] h-[40px] flex items-center justify-center shadow-sm text-orange-400 hover:text-orange-600 transition"
+              >
+                <FaLinkedin size={40} />
               </a>
             </div>
         </aside>
