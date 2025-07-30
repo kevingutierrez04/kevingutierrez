@@ -140,9 +140,21 @@ export default function Home() {
           </section>
 
           <section id="honors">
-            <h2 className="min-h-[300px] pb-5 text-orange-400 text-center text-2xl font-bold mb-2 pt-20 -mt-20">Honors</h2>
-            <p>Aliquam at nunc vel ligula faucibus fermentum. Sed blandit quis lorem nec hendrerit...</p>
-          </section>
+  <h2 className=" pb-5 text-orange-400 text-center text-2xl font-bold mb-2 pt-20 -mt-20">
+    Honors
+  </h2>
+  <p className="text-white mb-4">
+    The Gates Scholarship
+  </p>
+  <ul className="list-disc list-inside text-white">
+    <li>Selected as 1 of 300 scholars from a pool of over 37,000 applicants, the scholarship awards
+      with me a four-year scholarship of my full cost of attendance. In recognition for an outstanding
+      academic record, demonstrated leadership ability, and exceptional personal success skills,
+      the Gates Scholarship will provide the financial aid, mentorship, and resources to allow me to
+      reach my full potential.</li>
+  </ul>
+</section>
+
         </main>
       </div>
     </div>

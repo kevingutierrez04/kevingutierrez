@@ -1,6 +1,6 @@
 export const experienceData = [
   {
-    logoSrc: '/images/sample-logo.png',
+    logoSrc: '/images/aws.png',
     role: 'Software Engineering Intern',
     company: 'Amazon Web Services',
     companyUrl: 'https://aws.amazon.com/sagemaker-ai/',
@@ -11,7 +11,7 @@ export const experienceData = [
                   and test workloads efficiently`,
   },
   {
-    logoSrc: '/images/sample-logo.png',
+    logoSrc: '/images/ibm.webp',
     role: 'Accelerate Software Developer Fellow',
     company: 'International Business Machines',
     companyUrl: 'https://www.ibm.com/us-en',
@@ -22,7 +22,7 @@ export const experienceData = [
                   Server Architecture, and REST APIs`,
   },
   {
-    logoSrc: '/images/sample-logo.png',
+    logoSrc: '/images/seo.png',
     role: 'Software Engineering Intern',
     company: 'SEO Tech Developer',
     companyUrl: 'https://tech.seo-usa.org/',
@@ -31,7 +31,7 @@ export const experienceData = [
                   signatures, DDOS mitigation and rate limiting.`,
   },
   {
-    logoSrc: '/images/sample-logo.png',
+    logoSrc: '/images/spec.png',
     role: 'Senior Developer',
     company: 'Columbia Spectator',
     companyUrl: 'https://www.columbiaspectator.com/',
@@ -41,7 +41,7 @@ export const experienceData = [
                   performance and functionality; 5,300,000+ visitors in 2024`,
   },
   {
-    logoSrc: '/images/sample-logo.png',
+    logoSrc: '/images/google.png',
     role: 'Computer Science Summer Institute Scholar',
     company: 'Google',
     companyUrl: 'https://blog.google/inside-google/life-at-google/googles-computer-science-summer/',

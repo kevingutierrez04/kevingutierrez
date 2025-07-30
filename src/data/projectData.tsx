@@ -1,6 +1,6 @@
 export const projectData = [
     {
-        image: '/images/sample-logo.png',
+        image: '/images/campuscal.png',
         link: 'https://github.com/kevingutierrez04/CampusCal',
         title: 'CampusCal',
         description: `Used scikit-learn, React, Flask, and SQLAlchemy to create a calendar
@@ -9,12 +9,13 @@ export const projectData = [
                       a login authentication system `,
     },
     {
-        image: '/images/sample-logo.png',
-        link: 'https://github.com/kevingutierrez04/yhack',
-        title: 'WasteLess',
-        description: `Used Expo CLI with React Native framework, Flask, ChatGPT API and
-                      Supabase to develop an app that can scan refrigerator goods and
-                      recommend when to replenish items to minimize food waste and
-                      rationalize grocery purchasing`,
+        image: '/images/zenai.png',
+        link: 'https://github.com/kevingutierrez04/ZenAI',
+        title: 'ZenAI',
+        description: `ZenAI is a GPT powered bot, with specific prompting that allows GPT to
+        respond in over 20 different languages, and multiple voices. It takes in a situation,
+        Such as "I am prepping for a big test, guide me through a 5 minute meditation", and will
+        guide the user through a calming meditation session powered by Google's Text-To-Speech v1 API.
+`,
     },
 ]
