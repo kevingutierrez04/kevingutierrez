@@ -71,7 +71,7 @@ export default function Home() {
             <p className="pb-0.5 text-left text-sm">kmg2226@columbia.edu</p>
           </div>
           <a className="bg-orange-400 cursor-pointer mt-4 px-4 py-2 border border-white rounded hover:bg-orange-600 duration-700 transition"
-          href="/images/resume.png"
+          href="/images/Gutierrez,Kevin.pdf"
           target="_blank" 
           rel="noopener noreferrer"
           >
