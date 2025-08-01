@@ -34,8 +34,8 @@ export default function Home() {
   return (
     <div className="h-screen w-screen overflow-hidden font-sans">
       {/* Header */}
-      <header className="fixed top-0 left-0 w-full h-16 bg-gray-800 flex items-center pl-10 justify-start border-b-1">
-        <nav className="flex gap-8 text-white font-medium text-sm">
+      <header className="hidden md:flex fixed top-0 left-0 w-full h-16 bg-gray-800 border-b border-gray-700 items-center pl-10 z-10">
+        <nav className="flex gap-8 text-white font-semibold text-sm">
           {["about", "experience", "projects", "honors"].map((id) => (
             <button
               key={id}
@@ -60,49 +60,54 @@ export default function Home() {
       </header>
 
       {/* Split layout */}
-      <div className="flex pt-16 h-full">
+      <div className="flex flex-col md:flex-row md:pt-16 h-full">
         {/* Left fixed panel */}
-        <aside className="content-center w-1/2 bg-gray-800 text-white pl-20 p-10 space-y-5 overflow-y-auto">
+        <aside className="w-full md:w-1/3 bg-gray-800 text-white px-6 py-8 md:pl-20 md:p-10 space-y-5 overflow-visible text-center md:text-left">
           <div>
-            <h1 className="text-left pb-5 text-3xl font-bold text-orange-400">Kevin Gutierrez</h1>
-            <p className="pb-0.5 text-left text-sm">Columbia University Class of 2026</p>
-            <p className="pb-0.5 text-left text-sm">Computer Science</p>
-            <p className="pb-0.5 text-left text-sm">New York, NY</p>
-            <p className="pb-0.5 text-left text-sm">kmg2226@columbia.edu</p>
+            <h1 className="pb-5 text-3xl font-bold text-orange-400">Kevin Gutierrez</h1>
+            <p className="pb-0.5 text-sm">Columbia University Class of 2026</p>
+            <p className="pb-0.5 text-sm">Computer Science</p>
+            <p className="pb-0.5 text-sm">New York, NY</p>
+            <a
+              href="mailto:kmg2226@columbia.edu"
+              className="pb-0.5 text-sm text-orange-400 hover:underline transition inline-block"
+            >
+              kmg2226@columbia.edu
+            </a>
           </div>
-          <a className="bg-orange-400 cursor-pointer mt-4 px-4 py-2 border border-white rounded hover:bg-orange-600 duration-700 transition"
-          href="/images/Gutierrez,Kevin.pdf"
-          target="_blank" 
-          rel="noopener noreferrer"
-          >
-            Resume
-          </a>
+          <div className="mt-4 flex items-center justify-center md:justify-start gap-4">
+            <a
+              href="/images/Gutierrez,Kevin.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-orange-400 cursor-pointer px-4 py-2 border border-white rounded hover:bg-orange-600 duration-700 transition"
+            >
+              Resume
+            </a>
 
-          <div className="h-48"></div>
-            <div className="flex gap-2">
-              <a
-                href="https://github.com/kevingutierrez04"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-[40px] h-[40px] flex items-center justify-center shadow-sm text-orange-400 hover:text-orange-600 transition"
-              >
-                <FaGithub size={40} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/kevin-gutierrez-garcia/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-[40px] h-[40px] flex items-center justify-center shadow-sm text-orange-400 hover:text-orange-600 transition"
-              >
-                <FaLinkedin size={40} />
-              </a>
-            </div>
+            <a
+              href="https://github.com/kevingutierrez04"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-[40px] h-[40px] flex items-center justify-center shadow-sm text-orange-400 hover:text-orange-600 transition"
+            >
+              <FaGithub size={30} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/kevin-gutierrez-garcia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-[40px] h-[40px] flex items-center justify-center shadow-sm text-orange-400 hover:text-orange-600 transition"
+            >
+              <FaLinkedin size={30} />
+            </a>
+          </div>
         </aside>
 
         {/* Right panel */}
-        <main ref = {mainRef} className="bg-gray-800 w-1/2 h-full overflow-y-scroll p-10 space-y-5 text-white">
+        <main ref = {mainRef} className="bg-gray-800 w-full md:w-2/3 h-full overflow-y-scroll md:p-10 p-6 space-y-5 text-white">
           <section id="about">
-            <h2 className="text-orange-400 text-center text-2xl font-bold mb-2 pt-20 -mt-20">About</h2>
+            <h2 className="text-orange-400 text-center text-2xl font-bold mb-2 pt-20 md:pt-20 -mt-20">About</h2>
             <div className="space-y-3">
               <p>
               I’m a senior at Columbia University studying Computer Science with a minor in Economics. 
