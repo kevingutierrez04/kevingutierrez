@@ -22,7 +22,7 @@ export default function Home() {
         });
       },
       { rootMargin: '0px 0px -10% 0px',  // top margin smaller, bottom margin larger
-        threshold: 0.5, }
+        threshold: 0.6, }
     );
 
     const sections = document.querySelectorAll('section');
@@ -33,36 +33,11 @@ export default function Home() {
 
   return (
     <div className="h-screen w-screen overflow-hidden font-sans">
-      {/* Header */}
-      <header className="hidden md:flex fixed top-0 left-0 w-full h-16 bg-gray-800 border-b border-gray-700 items-center pl-10 z-10">
-        <nav className="flex gap-8 text-white font-semibold text-sm">
-          {["about", "experience", "projects", "honors"].map((id) => (
-            <button
-              key={id}
-              onClick={() => {
-              // 2. Scroll to section
-              const section = document.getElementById(id);
-              if (section && mainRef.current) {
-                mainRef.current.scrollTo({
-                  top: section.offsetTop,
-                  behavior: "smooth",
-                });
-              }
-            }}
-              className={`duration-700 cursor-pointer hover:bg-orange-600 rounded px-2 py-1 transition ${
-                activeSection === id ? "border-2 border-orange-400" : ""
-              }`}
-            >
-              {id.charAt(0).toUpperCase() + id.slice(1)}
-            </button>
-          ))}
-        </nav>
-      </header>
 
       {/* Split layout */}
-      <div className="flex flex-col md:flex-row md:pt-16 h-full">
+      <div className="flex flex-col md:flex-row h-full">
         {/* Left fixed panel */}
-        <aside className="w-full md:w-1/3 bg-gray-800 text-white px-6 py-8 md:pl-20 md:p-10 space-y-5 overflow-visible text-center md:text-left">
+        <aside className="w-full md:w-1/3 bg-gray-800 text-white px-6 py-2 md:pl-20 md:p-10 space-y-5 overflow-visible text-center md:text-left">
           <div>
             <h1 className="pb-5 text-3xl font-bold text-orange-400">Kevin Gutierrez</h1>
             <p className="pb-0.5 text-sm">Columbia University Class of 2026</p>
@@ -102,12 +77,36 @@ export default function Home() {
               <FaLinkedin size={30} />
             </a>
           </div>
-        </aside>
+
+          
+          <nav className="hidden md:flex flex-col mt-10 gap-2 text-white text-sm font-medium">
+    {["about", "experience", "projects", "honors"].map((id) => (
+      <button
+        key={id}
+        onClick={() => {
+          const section = document.getElementById(id);
+          if (section && mainRef.current) {
+            mainRef.current.scrollTo({
+              top: section.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        }}
+        className={`text-left max-w-[96px] rounded px-3 py-1 transition duration-700 cursor-pointer hover:bg-orange-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 ${
+          activeSection === id ? "border-2 border-orange-400" : ""
+        }`}
+        aria-current={activeSection === id ? "true" : undefined}
+      >
+        {id.charAt(0).toUpperCase() + id.slice(1)}
+      </button>
+    ))}
+  </nav>
+</aside>
 
         {/* Right panel */}
         <main ref = {mainRef} className="bg-gray-800 w-full md:w-2/3 h-full overflow-y-scroll md:p-10 p-6 space-y-5 text-white">
           <section id="about">
-            <h2 className="text-orange-400 text-center text-2xl font-bold mb-2 pt-20 md:pt-20 -mt-20">About</h2>
+            <h2 className="text-orange-400 text-center text-2xl font-bold pb-5 mb-2">About</h2>
             <div className="space-y-3">
               <p>
               I’m a senior at Columbia University studying Computer Science with a minor in Economics. 
@@ -127,7 +126,7 @@ export default function Home() {
           </section>
 
           <section id="experience">
-            <h2 className="pb-5 text-orange-400 text-center text-2xl font-bold mb-2 pt-20 -mt-20">Experience</h2>
+            <h2 className="pb-5 text-orange-400 text-center text-2xl font-bold mb-2">Experience</h2>
             <div className="space-y-6">
               {experienceData.map((item, index) => (
                 <ExperienceItem key={index} {...item} />
@@ -136,7 +135,7 @@ export default function Home() {
           </section>
 
           <section id="projects">
-            <h2 className="pb-5 text-orange-400 text-center text-2xl font-bold mb-2 pt-20 -mt-20">Selected Projects</h2>
+            <h2 className="pb-5 text-orange-400 text-center text-2xl font-bold mb-2">Selected Projects</h2>
             <div className="space-y-6">
               {projectData.map((item, index) => (
                 <ProjectItem key={index} {...item} />
@@ -145,7 +144,7 @@ export default function Home() {
           </section>
 
           <section id="honors">
-  <h2 className=" pb-5 text-orange-400 text-center text-2xl font-bold mb-2 pt-20 -mt-20">
+  <h2 className=" pb-5 text-orange-400 text-center text-2xl font-bold mb-2">
     Honors
   </h2>
   <p className="text-white mb-4">
